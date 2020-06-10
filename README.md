@@ -26,6 +26,7 @@ Any dependencies are installed and then the CLI will open the scene in a new bro
 **Usage**
 
 Click the box to make it go up or down. The NFT module is used to display my favorite CryptoKitty. 
+Press the button to test the MANA payment functionality with Metamask. 
 
 **How it looks**
 

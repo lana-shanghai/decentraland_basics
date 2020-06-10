@@ -1,6 +1,5 @@
 import utils from '../node_modules/decentraland-ecs-utils/index'
-import * as ERC20 from '../node_modules/decentraland-crypto-utils/erc20/index'
-
+import { PaidButton } from './paidButton'
 
 // NFT picture frame
 const entity = new Entity()
@@ -77,28 +76,12 @@ txt.addComponent(myText)
 
 engine.addEntity(txt)
 
-class ContractAddress extends Entity {
-  address: string
-  constructor(
-    address: string
-  ) {
-    super()
-    engine.addEntity(this)
-    this.address = address
-        
-
-    const addr = new Entity()
-    addr.addComponent(
-      new Transform({
-        position: new Vector3(6, 5, 3)
-      })
-    )
-    const myText = new TextShape(address)
-    addr.addComponent(myText)
-
-    engine.addEntity(addr)
+const button = new PaidButton(
+  { position: new Vector3(7, 0, 11), rotation: Quaternion.Euler(0, 0, 0) },
+  '0x24aA0566Fc4a75a740A0BC5fCB1509d6621932D0',
+  10,
+  'Hi',
+  () => {
+    log('Paid fee')
   }
-}
-
-const address = new ContractAddress('0xe7664229833AE4Abf4E269b8F23a86B657E2338D')
-
+)
