@@ -1,5 +1,5 @@
 # decentraland_basics
-Click the box to send it up, view my precious CryptoKitty and see the contract address. 
+Hello world. Click the box to send it up, view my precious CryptoKitty and test the payment button that opens Metamask. 
 
 **Install the CLI**
 
